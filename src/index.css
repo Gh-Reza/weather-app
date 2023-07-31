@@ -1,3 +1,7 @@
+html {
+  font-size: 65.8%;
+}
+
 body {
   margin: 0;
   font-family:
@@ -24,4 +28,10 @@ code {
     Consolas,
     'Courier New',
     monospace;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
 }
