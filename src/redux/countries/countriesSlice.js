@@ -9,7 +9,7 @@ export const getCountries = createAsyncThunk('countries/getCountries', async () 
   const response = await fetch(' https://restcountries.com/v3.1/all');
   const data = await response.json();
   const neededData = data.map((d) => ({
-    name: d.common,
+    name: d.name.common,
     flag: d.flags.svg,
   }));
   return neededData;
