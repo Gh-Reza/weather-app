@@ -21,8 +21,12 @@ const countriesSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
+      .addCase(getCountries.pending, (state) => {
+        state.isLoading = true;
+      })
       .addCase(getCountries.fulfilled, (state, action) => {
         state.countries = action.payload;
+        state.isLoading = false;
       });
   },
 });
