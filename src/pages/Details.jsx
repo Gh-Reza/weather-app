@@ -5,7 +5,7 @@ import { getWeather } from '../redux/weather/weatherSlice';
 
 const Details = () => {
   const states = useSelector((store) => store.countryStates.countryStates);
-  // const details = useSelector((store) => store.weather.weatherDetails);
+  const details = useSelector((store) => store.weather.weatherDetails);
   console.log(states);
   const dispatch = useDispatch();
 
@@ -13,12 +13,16 @@ const Details = () => {
     states.forEach((state) => {
       dispatch(getWeather(state.name));
     });
-  });
+  }, [dispatch, states]);
 
   return (
     <div>
-      {states.map((state) => (
-        <h2 key={state.name}>{state.name}</h2>
+      {details.map((state) => (
+        <div key={state.lat} className="d-flex">
+          <h2 key={state.lat}>{state.province}</h2>
+          <h2 key={state.lat}>{state.condition}</h2>
+          <img src={state.icon} alt="" />
+        </div>
       ))}
     </div>
   );

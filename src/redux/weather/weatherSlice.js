@@ -8,14 +8,21 @@ export const getWeather = createAsyncThunk(
       `https://api.weatherapi.com/v1/forecast.json?key=${key}&q=${stateName}&days=3&aqi=yes`,
     );
     const data = await response.json();
-    console.log(data);
-    return data;
+    const neededData = {
+      province: data.location.region,
+      condition: data.current.condition.text,
+      icon: data.current.condition.icon,
+      lat: data.location.tz_id + Date.now(),
+    };
+    console.log(neededData);
+    return neededData;
   },
 );
 
 const initialState = {
-  weatherDetails: {},
+  weatherDetails: [],
   isLoading: false,
+  hasError: false,
 };
 
 const weatherSlice = createSlice({
@@ -28,7 +35,10 @@ const weatherSlice = createSlice({
         state.isLoading = true;
       })
       .addCase(getWeather.fulfilled, (state, action) => {
-        state.weatherDetails = action.payload;
+        state.weatherDetails.push(action.payload);
+      })
+      .addCase(getWeather.rejected, (state) => {
+        state.hasError = true;
       });
   },
 });
