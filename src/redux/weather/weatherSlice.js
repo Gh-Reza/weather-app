@@ -15,7 +15,7 @@ export const getWeather = createAsyncThunk(
       temp: data.current.temp_c,
       id: data.location.tz_id + Date.now(),
     };
-    console.log(neededData);
+    // console.log(neededData);
     return neededData;
   },
 );
