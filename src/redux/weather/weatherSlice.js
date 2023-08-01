@@ -8,6 +8,7 @@ export const getWeather = createAsyncThunk(
       `https://api.weatherapi.com/v1/forecast.json?key=${key}&q=${stateName}&days=3&aqi=yes`,
     );
     const data = await response.json();
+    console.log(data);
     return data;
   },
 );
