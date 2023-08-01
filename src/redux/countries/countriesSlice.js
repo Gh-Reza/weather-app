@@ -3,6 +3,7 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 const initialState = {
   countries: [],
   isLoading: false,
+  hasError: false,
 };
 
 export const getCountries = createAsyncThunk('countries/getCountries', async () => {
@@ -26,6 +27,10 @@ const countriesSlice = createSlice({
       })
       .addCase(getCountries.fulfilled, (state, action) => {
         state.countries = action.payload;
+        state.isLoading = false;
+      })
+      .addCase(getCountries.rejected, (state) => {
+        state.hasError = true;
         state.isLoading = false;
       });
   },

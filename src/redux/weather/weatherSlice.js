@@ -15,14 +15,13 @@ export const getWeather = createAsyncThunk(
       temp: data.current.temp_c,
       id: data.location.tz_id + Date.now(),
     };
-    // console.log(neededData);
     return neededData;
   },
 );
 
 const initialState = {
   weatherDetails: [],
-  isLoading: false,
+  isLoading: true,
   hasError: false,
 };
 
@@ -37,9 +36,11 @@ const weatherSlice = createSlice({
       })
       .addCase(getWeather.fulfilled, (state, action) => {
         state.weatherDetails.push(action.payload);
+        state.isLoading = false;
       })
       .addCase(getWeather.rejected, (state) => {
         state.hasError = true;
+        // state.isLoading = false;
       });
   },
 });

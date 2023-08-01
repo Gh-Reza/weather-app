@@ -27,6 +27,7 @@ export const getCountryStates = createAsyncThunk(
 const initialState = {
   countryStates: [],
   isLoading: false,
+  hasError: false,
 };
 
 const countryStateSlice = createSlice({
@@ -34,12 +35,18 @@ const countryStateSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(getCountryStates.pending, (state) => {
-      state.isLoading = true;
-    }).addCase(getCountryStates.fulfilled, (state, action) => {
-      state.countryStates = action.payload.data.states;
-      state.isLoading = false;
-    });
+    builder
+      .addCase(getCountryStates.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(getCountryStates.fulfilled, (state, action) => {
+        state.countryStates = action.payload.data.states;
+        state.isLoading = false;
+      })
+      .addCase(getCountryStates.rejected, (state) => {
+        state.isLoading = false;
+        state.hasError = true;
+      });
   },
 });
 

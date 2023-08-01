@@ -6,7 +6,7 @@ import Details from './pages/Details';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App d-flex flex-column min-vh-100">
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
