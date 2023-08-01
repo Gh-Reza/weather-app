@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux/es/hooks/useSelector';
 import { getWeather } from '../redux/weather/weatherSlice';
+import State from '../components/State';
 
 const Details = () => {
   const states = useSelector((store) => store.countryStates.countryStates);
@@ -16,13 +17,15 @@ const Details = () => {
   }, [dispatch, states]);
 
   return (
-    <div>
+    <div className="container">
       {details.map((state) => (
-        <div key={state.lat} className="d-flex">
-          <h2 key={state.lat}>{state.province}</h2>
-          <h2 key={state.lat}>{state.condition}</h2>
-          <img src={state.icon} alt="" />
-        </div>
+        <State
+          key={state.id}
+          province={state.province}
+          icon={state.icon}
+          condition={state.condition}
+          temp={state.temp}
+        />
       ))}
     </div>
   );

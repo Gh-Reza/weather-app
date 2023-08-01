@@ -12,7 +12,8 @@ export const getWeather = createAsyncThunk(
       province: data.location.region,
       condition: data.current.condition.text,
       icon: data.current.condition.icon,
-      lat: data.location.tz_id + Date.now(),
+      temp: data.current.temp_c,
+      id: data.location.tz_id + Date.now(),
     };
     console.log(neededData);
     return neededData;
