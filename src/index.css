@@ -35,9 +35,3 @@ code {
     font-size: 50%;
   }
 }
-
-.loading {
-  width: 100%;
-  height: 100vh;
-  background-color: black;
-}

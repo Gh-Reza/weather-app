@@ -17,7 +17,7 @@ const Home = () => {
 
   const countries = useSelector((store) => store.countries.countries);
   return (
-    <main className="container container-md-fluid bg-dark">
+    <main className="gen container container-md-fluid">
       <div className="row row-cols-2 row-cols-sm-3 row-cols-md-4">
         {countries.map((country) => (
           <Country

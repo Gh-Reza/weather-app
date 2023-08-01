@@ -20,14 +20,14 @@ const Details = () => {
 
   if (states.hasError) {
     return (
-      <div className="container d-flex justify-content-center align-items-center">
+      <div className="gen container d-flex justify-content-center align-items-center">
         <h2 className="text-danger">Something went wrong</h2>
       </div>
     );
   }
 
   return (
-    <div className="container flex-grow-1 d-flex flex-column justify-content-center">
+    <div className="gen container flex-grow-1 d-flex flex-column justify-content-center">
       {isLoading ? (
         <div className="container d-flex justify-content-center align-items-center">
           <SpringSpinner size={60} color="#333" />

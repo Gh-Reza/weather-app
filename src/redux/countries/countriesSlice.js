@@ -12,8 +12,10 @@ export const getCountries = createAsyncThunk('countries/getCountries', async () 
   const neededData = data.map((d) => ({
     name: d.name.common,
     flag: d.flags.svg,
+    independent: d.independent,
   }));
-  return neededData;
+  const result = neededData.filter((country) => country.independent);
+  return result;
 });
 
 const countriesSlice = createSlice({

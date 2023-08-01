@@ -12,7 +12,7 @@ const State = ({
         {temp}
         <span>{'\u00b0'}</span>
       </h3>
-      <div className="ms-5">
+      <div className="ms-5 text-center">
         <img src={icon} alt="" />
         <p>{condition}</p>
       </div>
