@@ -5,7 +5,22 @@
 .header {
   padding: 2rem;
   padding-bottom: 8rem;
-  background: linear-gradient(rgba(0, 0, 0, 0.3) 3%, rgba(0, 0, 0, 1) 70%), url(./assets/earth.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.3) 3%, rgba(0, 0, 0, 1) 60%), url(./assets/earth.jpg);
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.country {
+  height: 15rem;
+  background-color: #201e2ea7;
+}
+
+.country-name,
+.capital-name {
+  text-decoration: none;
+  color: beige;
+}
+
+.flag {
+  width: 10rem;
 }

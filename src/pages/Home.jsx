@@ -24,6 +24,7 @@ const Home = () => {
             key={country.name}
             name={country.name}
             flag={country.flag}
+            capital={country.capital}
             onClick={handleClick}
           />
         ))}

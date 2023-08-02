@@ -13,6 +13,7 @@ export const getCountries = createAsyncThunk('countries/getCountries', async () 
     name: d.name.common,
     flag: d.flags.svg,
     independent: d.independent,
+    capital: d.capital,
   }));
   const result = neededData.filter((country) => country.independent);
   return result;
