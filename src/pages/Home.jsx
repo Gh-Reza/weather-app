@@ -24,7 +24,9 @@ const Home = () => {
             key={country.name}
             name={country.name}
             flag={country.flag}
-            capital={country.capital}
+            capital={country.capital[0]}
+            lat={country.latlng[0]}
+            lng={country.latlng[1]}
             onClick={handleClick}
           />
         ))}

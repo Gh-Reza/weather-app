@@ -14,6 +14,7 @@ export const getCountries = createAsyncThunk('countries/getCountries', async () 
     flag: d.flags.svg,
     independent: d.independent,
     capital: d.capital,
+    latlng: d.latlng,
   }));
   const result = neededData.filter((country) => country.independent);
   return result;

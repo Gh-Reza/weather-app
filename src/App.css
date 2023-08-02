@@ -11,7 +11,7 @@
 }
 
 .country {
-  height: 15rem;
+  height: 20rem;
   background-color: #201e2ea7;
 }
 
@@ -23,4 +23,8 @@
 
 .flag {
   width: 10rem;
+}
+
+.back-icon {
+  width: 2.5rem;
 }
