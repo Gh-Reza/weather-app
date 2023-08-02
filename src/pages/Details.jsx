@@ -10,7 +10,6 @@ const Details = () => {
   const details = useSelector((store) => store.weather.weatherDetails);
   const isLoading = useSelector((store) => store.weather.isLoading);
   const res = details.filter((detail) => detail.province !== '');
-  console.log(states);
   const dispatch = useDispatch();
 
   useEffect(() => {
