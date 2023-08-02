@@ -31,7 +31,7 @@ const Details = () => {
     <div className="gen container flex-grow-1 d-flex flex-column justify-content-center">
       {isLoading ? (
         <div className="container d-flex justify-content-center align-items-center">
-          <SpringSpinner size={60} color="#333" />
+          <SpringSpinner size={60} color="#fff" />
         </div>
       ) : (
         res.map((state) => (
