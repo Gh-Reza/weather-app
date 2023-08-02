@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 const Country = ({
   name, flag, onClick, capital, lat, lng,
 }) => (
-  <div className="col-7 p-3">
+  <div className="col p-3">
     <NavLink to="/details" onClick={() => onClick(name)} className="text-decoration-none text-light">
       <div className="country container p-4">
         <div className="row">
