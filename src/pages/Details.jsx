@@ -2,17 +2,19 @@ import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux/es/hooks/useSelector';
 import { SpringSpinner } from 'react-epic-spinners';
-import { getWeather } from '../redux/weather/weatherSlice';
+import { getWeather, resetStore } from '../redux/weather/weatherSlice';
 import State from '../components/State';
 
 const Details = () => {
   const states = useSelector((store) => store.countryStates.countryStates);
   const details = useSelector((store) => store.weather.weatherDetails);
   const isLoading = useSelector((store) => store.weather.isLoading);
+  const res = details.filter((detail) => detail.province !== '');
   console.log(states);
   const dispatch = useDispatch();
 
   useEffect(() => {
+    dispatch(resetStore([]));
     states.forEach((state) => {
       dispatch(getWeather(state.name));
     });
@@ -33,7 +35,7 @@ const Details = () => {
           <SpringSpinner size={60} color="#333" />
         </div>
       ) : (
-        details.map((state) => (
+        res.map((state) => (
           <State
             key={state.id}
             province={state.province}
