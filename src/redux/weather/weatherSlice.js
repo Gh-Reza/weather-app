@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 export const getWeather = createAsyncThunk(
-  'countryStates/getWeather',
+  'weather/getWeather',
   async (stateName) => {
     const key = 'b134e251af58430f964152538220407';
     const response = await fetch(
