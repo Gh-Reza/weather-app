@@ -5,7 +5,6 @@ import { getCountryStates } from '../redux/countries/statesSlice';
 
 const Search = () => {
   const countries = useSelector((store) => store.countries.countries);
-  // console.log(countries);
   const [inputValue, setInputValue] = useState(countries);
   useEffect(() => {
     setInputValue(countries);
