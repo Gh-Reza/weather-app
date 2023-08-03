@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
-import { useSelector } from 'react-redux/es/hooks/useSelector';
+import { useDispatch, useSelector } from 'react-redux';
 import { SpringSpinner } from 'react-epic-spinners';
 import { getWeather, resetStore } from '../redux/weather/weatherSlice';
 import State from '../components/State';
