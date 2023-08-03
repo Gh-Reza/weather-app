@@ -10,7 +10,6 @@ const Search = () => {
   useEffect(() => {
     setInputValue(countries);
   }, [countries]);
-  console.log(inputValue);
 
   const handleChange = (e) => {
     const typedValue = e.target.value;
