@@ -1,6 +1,7 @@
 import { NavLink, useLocation } from 'react-router-dom';
 import Icon from '../assets/icon.png';
 import BackIcon from '../assets/icon50.png';
+import Search from './Search';
 
 const Header = () => {
   const location = useLocation();
@@ -12,6 +13,7 @@ const Header = () => {
         <h1 className="fs-1">WeatherAPP</h1>
       </div>
       <div className="right">
+        {!isDetailsPage && <Search />}
         <img src={Icon} alt="" />
       </div>
     </header>

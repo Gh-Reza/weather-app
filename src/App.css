@@ -28,3 +28,48 @@
 .back-icon {
   width: 2.5rem;
 }
+
+.search-container {
+  position: absolute;
+  right: 14%;
+  top: 30px;
+  height: 200px;
+  width: 20rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.search-container::-webkit-scrollbar {
+  width: 0;
+  background-color: transparent;
+}
+
+.result-box {
+  display: none;
+  background-color: #262626ec;
+  overflow: hidden;
+  list-style: none;
+  padding: 10px;
+  z-index: 9;
+}
+
+.input {
+  width: 100%;
+  background-color: #201e2ea7;
+  padding: 5px;
+  border: solid 1px white;
+  outline: none;
+  caret-color: white;
+  color: white;
+}
+
+.input::placeholder {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .search-container {
+    width: 15rem;
+    right: 20%;
+  }
+}
