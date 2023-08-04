@@ -60,7 +60,7 @@ main {
   list-style: none;
   display: hidden;
   padding: 10px;
-  height: 200px;
+  max-height: 200px;
   z-index: 9;
 }
 
