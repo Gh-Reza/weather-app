@@ -57,7 +57,6 @@ main {
   background-color: #262626ec;
   overflow: scroll;
   list-style: none;
-  display: hidden;
   padding: 10px;
   max-height: 200px;
   z-index: 9;
