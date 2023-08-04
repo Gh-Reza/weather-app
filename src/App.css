@@ -2,12 +2,13 @@
   background: black;
 }
 
+main {
+  position: relative;
+}
+
 .header {
   padding: 2rem;
-  padding-bottom: 8rem;
-  background: linear-gradient(rgba(0, 0, 0, 0.3) 3%, rgba(0, 0, 0, 1) 60%), url(./assets/earth.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
+  box-shadow: 0 3px 9px #ffffff5c;
 }
 
 .country {
@@ -16,13 +17,17 @@
 }
 
 .light-bg {
-  background-color: #474747a9;
+  background-color: transparent;
 }
 
 .country-name,
 .capital-name {
   text-decoration: none;
   color: beige;
+}
+
+.country-container {
+  margin-top: 6rem;
 }
 
 .flag {
@@ -35,9 +40,9 @@
 
 .search-container {
   position: absolute;
-  right: 14%;
-  top: 30px;
-  height: 200px;
+  left: 5px;
+  top: 1.2rem;
+  /* height: 200px; */
   width: 20rem;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -51,10 +56,17 @@
 .result-box {
   display: none;
   background-color: #262626ec;
-  overflow: hidden;
+  overflow: scroll;
   list-style: none;
+  display: hidden;
   padding: 10px;
+  height: 200px;
   z-index: 9;
+}
+
+.result-box::-webkit-scrollbar {
+  width: 0;
+  background-color: transparent;
 }
 
 .input {
@@ -75,5 +87,9 @@
   .search-container {
     width: 15rem;
     right: 20%;
+  }
+
+  .light-bg {
+    background-color: #474747a9;
   }
 }
