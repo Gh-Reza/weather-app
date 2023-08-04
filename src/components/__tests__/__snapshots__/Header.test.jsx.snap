@@ -9,6 +9,15 @@ Object {
         class="header text-white d-flex justify-content-between align-items-center"
       >
         <div
+          class="d-flex"
+        >
+          <p
+            class="h2"
+          >
+            2023
+          </p>
+        </div>
+        <div
           class="left d-flex align-items-center"
         >
           <h1
@@ -20,20 +29,6 @@ Object {
         <div
           class="right"
         >
-          <div
-            class="search-container"
-          >
-            <input
-              class="input"
-              id=""
-              name=""
-              placeholder="Search"
-              type="text"
-            />
-            <ul
-              class="result-box"
-            />
-          </div>
           <img
             alt=""
             src="icon.png"
@@ -47,6 +42,15 @@ Object {
       class="header text-white d-flex justify-content-between align-items-center"
     >
       <div
+        class="d-flex"
+      >
+        <p
+          class="h2"
+        >
+          2023
+        </p>
+      </div>
+      <div
         class="left d-flex align-items-center"
       >
         <h1
@@ -58,20 +62,6 @@ Object {
       <div
         class="right"
       >
-        <div
-          class="search-container"
-        >
-          <input
-            class="input"
-            id=""
-            name=""
-            placeholder="Search"
-            type="text"
-          />
-          <ul
-            class="result-box"
-          />
-        </div>
         <img
           alt=""
           src="icon.png"

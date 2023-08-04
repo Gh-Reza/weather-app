@@ -6,7 +6,7 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="d-flex justify-content-between align-items-center p-4 bg-dark text-white mb-3"
+        class="province d-flex justify-content-between align-items-center p-4 text-white"
       >
         <div>
           <h3>
@@ -37,7 +37,7 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="d-flex justify-content-between align-items-center p-4 bg-dark text-white mb-3"
+      class="province d-flex justify-content-between align-items-center p-4 text-white"
     >
       <div>
         <h3>

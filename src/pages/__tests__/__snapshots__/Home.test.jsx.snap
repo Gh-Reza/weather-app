@@ -6,21 +6,57 @@ Object {
   "baseElement": <body>
     <div>
       <main
-        class="gen container container-md-fluid"
+        class="container container-md-fluid"
       >
         <div
-          class="row row-cols-2 row-cols-sm-3 row-cols-md-4"
-        />
+          class="search-container"
+        >
+          <input
+            class="input"
+            id=""
+            name=""
+            placeholder="Search"
+            type="text"
+          />
+          <ul
+            class="result-box"
+          />
+        </div>
+        <div
+          class="container country-container"
+        >
+          <div
+            class="row row-cols-2 row-cols-sm-3 row-cols-md-4"
+          />
+        </div>
       </main>
     </div>
   </body>,
   "container": <div>
     <main
-      class="gen container container-md-fluid"
+      class="container container-md-fluid"
     >
       <div
-        class="row row-cols-2 row-cols-sm-3 row-cols-md-4"
-      />
+        class="search-container"
+      >
+        <input
+          class="input"
+          id=""
+          name=""
+          placeholder="Search"
+          type="text"
+        />
+        <ul
+          class="result-box"
+        />
+      </div>
+      <div
+        class="container country-container"
+      >
+        <div
+          class="row row-cols-2 row-cols-sm-3 row-cols-md-4"
+        />
+      </div>
     </main>
   </div>,
   "debug": [Function],

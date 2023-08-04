@@ -6,11 +6,11 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="col p-3"
+        class="col p-0 country-box"
       >
         <a
           class="text-decoration-none text-light"
-          href="/details"
+          href="/details/Afghnistan"
         >
           <div
             class="country container p-4"
@@ -63,11 +63,11 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="col p-3"
+      class="col p-0 country-box"
     >
       <a
         class="text-decoration-none text-light"
-        href="/details"
+        href="/details/Afghnistan"
       >
         <div
           class="country container p-4"
