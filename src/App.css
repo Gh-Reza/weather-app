@@ -42,7 +42,6 @@ main {
   position: absolute;
   left: 5px;
   top: 1.2rem;
-  /* height: 200px; */
   width: 20rem;
   overflow-y: scroll;
   overflow-x: hidden;

@@ -53,7 +53,7 @@ const Search = () => {
         {inputValue.map((country) => (
           <li key={country.id}>
             <NavLink
-              to="/details"
+              to={`/details/${country.name}`}
               className="text-white text-decoration-none fs-5"
               onClick={handleClick}
             >
