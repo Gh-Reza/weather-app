@@ -5,7 +5,7 @@ const Country = ({
   name, flag, onClick, capital, lat, lng, index,
 }) => (
   <div className={[1, 2].includes(index % 4) ? 'light-bg col p-0 country-box' : 'col p-0 country-box'}>
-    <NavLink to="/details" onClick={() => onClick(name)} className="text-decoration-none text-light">
+    <NavLink to={`/details/${name}`} onClick={() => onClick(name)} className="text-decoration-none text-light">
       <div className="country container p-4">
         <div className="row">
           <div className="col-12">

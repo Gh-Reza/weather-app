@@ -4,7 +4,7 @@ import BackIcon from '../assets/icon50.png';
 
 const Header = () => {
   const location = useLocation();
-  const isDetailsPage = location.pathname === '/details';
+  const isDetailsPage = location.pathname.startsWith('/details/');
   return (
     <header className="header text-white d-flex justify-content-between align-items-center">
       <div className="d-flex">
