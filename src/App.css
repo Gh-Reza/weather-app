@@ -15,6 +15,10 @@
   background-color: #201e2ea7;
 }
 
+.light-bg {
+  background-color: #474747a9;
+}
+
 .country-name,
 .capital-name {
   text-decoration: none;

@@ -17,9 +17,9 @@ const Home = () => {
 
   const countries = useSelector((store) => store.countries.countries);
   return (
-    <main className="gen container container-md-fluid">
+    <main className="country-container container container-md-fluid">
       <div className="row row-cols-2 row-cols-sm-3 row-cols-md-4">
-        {countries.map((country) => (
+        {countries.map((country, i) => (
           <Country
             key={country.name}
             name={country.name}
@@ -28,6 +28,7 @@ const Home = () => {
             lat={country.latlng[0]}
             lng={country.latlng[1]}
             onClick={handleClick}
+            index={i}
           />
         ))}
       </div>

@@ -2,9 +2,9 @@ import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 
 const Country = ({
-  name, flag, onClick, capital, lat, lng,
+  name, flag, onClick, capital, lat, lng, index,
 }) => (
-  <div className="col p-3">
+  <div className={[1, 2].includes(index % 4) ? 'light-bg col p-0 country-box' : 'col p-0 country-box'}>
     <NavLink to="/details" onClick={() => onClick(name)} className="text-decoration-none text-light">
       <div className="country container p-4">
         <div className="row">
@@ -35,6 +35,7 @@ Country.propTypes = {
   capital: PropTypes.string.isRequired,
   lat: PropTypes.number.isRequired,
   lng: PropTypes.number.isRequired,
+  index: PropTypes.number.isRequired,
   onClick: PropTypes.func.isRequired,
 };
 
