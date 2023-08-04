@@ -83,6 +83,14 @@ main {
   color: white;
 }
 
+.province:nth-child(odd) {
+  background-color: #201e2ea7;
+}
+
+.province:nth-child(even) {
+  background-color: #262626ec;
+}
+
 @media (max-width: 768px) {
   .search-container {
     width: 15rem;

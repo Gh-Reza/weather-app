@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 const State = ({
   province, icon, condition, temp,
 }) => (
-  <div className="d-flex justify-content-between align-items-center p-4 bg-dark text-white mb-3">
+  <div className="province d-flex justify-content-between align-items-center p-4 text-white">
     <div>
       <h3>{province}</h3>
     </div>
