@@ -1,0 +1,101 @@
+.App {
+  background: black;
+}
+
+main {
+  position: relative;
+}
+
+.header {
+  padding: 2rem;
+  box-shadow: 0 3px 9px #ffffff5c;
+}
+
+.country {
+  height: 20rem;
+  background-color: #201e2ea7;
+}
+
+.light-bg {
+  background-color: transparent;
+}
+
+.country-name,
+.capital-name {
+  text-decoration: none;
+  color: beige;
+}
+
+.country-container {
+  margin-top: 6rem;
+}
+
+.flag {
+  width: 10rem;
+}
+
+.back-icon {
+  width: 2.5rem;
+}
+
+.search-container {
+  position: absolute;
+  left: 5px;
+  top: 1.2rem;
+  width: 20rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.search-container::-webkit-scrollbar {
+  width: 0;
+  background-color: transparent;
+}
+
+.result-box {
+  display: none;
+  background-color: #262626ec;
+  overflow: scroll;
+  list-style: none;
+  padding: 10px;
+  max-height: 200px;
+  z-index: 9;
+}
+
+.result-box::-webkit-scrollbar {
+  width: 0;
+  background-color: transparent;
+}
+
+.input {
+  width: 100%;
+  background-color: #201e2ea7;
+  padding: 5px;
+  border: solid 1px white;
+  outline: none;
+  caret-color: white;
+  color: white;
+}
+
+.input::placeholder {
+  color: white;
+}
+
+.province:nth-child(odd) {
+  background-color: #201e2ea7;
+}
+
+.province:nth-child(even) {
+  background-color: #262626ec;
+}
+
+@media (max-width: 768px) {
+  .search-container {
+    width: 15rem;
+    right: 20%;
+  }
+
+  .light-bg {
+    background-color: #474747a9;
+  }
+}
