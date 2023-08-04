@@ -20,7 +20,7 @@ const Home = () => {
   return (
     <main className="container container-md-fluid">
       <Search />
-      <div className="container country-container">
+      <div className="container-fluid country-container">
         <div className="row row-cols-2 row-cols-sm-3 row-cols-md-4">
           {countries.map((country, i) => (
             <Country
