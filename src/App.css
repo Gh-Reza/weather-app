@@ -126,6 +126,10 @@ main {
   background-color: #141f2db7;
 }
 
+.gen {
+  width: 50%;
+}
+
 @media (max-width: 768px) {
   .search-container {
     width: 20rem;
@@ -134,5 +138,9 @@ main {
 
   .light-bg {
     background-color: #2a2a2aa9;
+  }
+
+  .gen {
+    width: 100%;
   }
 }
