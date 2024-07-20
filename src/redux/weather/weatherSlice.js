@@ -9,7 +9,7 @@ export const getWeather = createAsyncThunk(
     );
     const data = await response.json();
     const neededData = {
-      province: data.location.region,
+      province: stateName,
       condition: data.current.condition.text,
       icon: data.current.condition.icon,
       temp: data.current.temp_c,

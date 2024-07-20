@@ -3,13 +3,27 @@ import { useDispatch, useSelector } from 'react-redux';
 import { SpringSpinner } from 'react-epic-spinners';
 import { getWeather, resetStore } from '../redux/weather/weatherSlice';
 import State from '../components/State';
+import { getCountryStates } from '../redux/countries/statesSlice';
 
 const Details = () => {
   const states = useSelector((store) => store.countryStates.countryStates);
+
   const details = useSelector((store) => store.weather.weatherDetails);
   const isLoading = useSelector((store) => store.weather.isLoading);
-  const res = details.filter((detail) => detail.province !== '');
+  const res = [];
+  const detailsSet = new Set();
+
+  details.forEach((detail) => {
+    if (!detailsSet.has(detail.province) && details.province !== '') {
+      res.push(detail);
+      detailsSet.add(detail.province);
+    }
+  });
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getCountryStates());
+  }, [dispatch]);
 
   useEffect(() => {
     dispatch(resetStore([]));

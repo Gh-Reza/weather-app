@@ -2,18 +2,15 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 export const getCountryStates = createAsyncThunk(
   'countryStates/getCountryStates',
-  async (country) => {
+  async () => {
     try {
       const response = await fetch(
-        'https://countriesnow.space/api/v0.1/countries/states',
+        'http://localhost:3333/provinces?lang=en',
         {
-          method: 'POST',
+          method: 'GET',
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({
-            country,
-          }),
         },
       );
       const data = await response.json();
@@ -40,7 +37,7 @@ const countryStateSlice = createSlice({
         state.isLoading = true;
       })
       .addCase(getCountryStates.fulfilled, (state, action) => {
-        state.countryStates = action.payload.data.states;
+        state.countryStates = action.payload.data;
         state.isLoading = false;
       })
       .addCase(getCountryStates.rejected, (state) => {
